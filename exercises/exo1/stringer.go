@@ -1,8 +1,34 @@
 package main
 
-import "fmt"
+import ("fmt"
+		"math"
+)
 
 // Implement types Rectangle, Circle and Shape
+type Shape interface {
+	Area() float64
+
+}
+
+type Circle struct {
+	r float64
+}
+
+type Rectangle struct {
+	Width float64
+	Length float64
+
+}
+
+func (r Rectangle) Area() float64{
+
+	return r.Width * r.Length
+}
+
+func (c Circle) Area() float64{
+	
+
+}
 
 func main() {
 	r := &Rectangle{2, 3}
